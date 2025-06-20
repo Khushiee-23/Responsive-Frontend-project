@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - CodingLab</title>
+    <link rel="stylesheet" href="product.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <div class="logo">CodingLab</div>
+        <div class="menu">
+            <a href="home.html" target="_blank">Home</a>
+            <a href="product.html" target="_blank">Products</a>
+            <a href="service.html" target="_blank">Services</a>
+            <a href="contact.html" target="_blank">Contact Us</a>
+            <div class="search-bar">
+    <div class="icon">🔍</div>
+    <input type="text" id="searchInput" placeholder="Search here..." aria-label="Search" oninput="handleSearch()" onblur="hideSearchResults()">
+    <div class="search-results" id="searchResults"></div>
+</div>
+        </div>
+        <div class="menu-toggle" onclick="document.querySelector('.sidebar').classList.toggle('active')" aria-label="Toggle menu">☰</div>
+    </nav>
+
+    <div class="sidebar">
+        <div class="close-btn" onclick="document.querySelector('.sidebar').classList.toggle('active')" aria-label="Close menu">✖</div>
+        <div class="menu">
+            <a href="home.html" target="_blank">Home</a>
+            <a href="service.html" target="_blank">Services</a>
+            <a href="product.html" target="_blank">Products</a>
+            <a href="contact.html" target="_blank">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Products Section -->
+    <div class="products-section">
+        <h1>Our Popular Courses</h1>
+
+        <!-- Course 1: Artificial Intelligence and Machine Learning -->
+        <div class="course-card">
+            <div class="course-image">[Photo Placeholder: An image of a futuristic AI interface with neural network graphics and a robot arm interacting with a digital screen]</div>
+            <div class="course-details">
+                <h3>Artificial Intelligence and Machine Learning</h3>
+                <div class="rating">★★★★★ (4.8/5)</div>
+                <div class="cost">$299</div>
+                <p>
+                    Dive into the world of AI and ML with this comprehensive course. Learn to build intelligent systems, work with neural networks, and apply machine learning algorithms to real-world problems. Perfect for CSE students aiming to enter cutting-edge tech fields.
+                </p>
+            </div>
+        </div>
+
+        <!-- Course 2: Full Stack Development -->
+        <div class="course-card">
+            <div class="course-image">[Photo Placeholder: An image of a laptop displaying a website with code editor open, showcasing HTML, CSS, and JavaScript code snippets]</div>
+            <div class="course-details">
+                <h3>Full Stack Development</h3>
+                <div class="rating">★★★★☆ (4.5/5)</div>
+                <div class="cost">$249</div>
+                <p>
+                    Master both front-end and back-end development in this hands-on course. Learn HTML, CSS, JavaScript, Node.js, and databases to build fully functional web applications. Ideal for students looking to become versatile developers.
+                </p>
+            </div>
+        </div>
+
+        <!-- Course 3: Cybersecurity -->
+        <div class="course-card">
+            <div class="course-image">[Photo Placeholder: An image of a digital lock with binary code in the background, symbolizing cybersecurity and data protection]</div>
+            <div class="course-details">
+                <h3>Cybersecurity</h3>
+                <div class="rating">★★★★★ (4.7/5)</div>
+                <div class="cost">$279</div>
+                <p>
+                    Protect digital systems with this in-depth cybersecurity course. Explore ethical hacking, network security, and threat analysis to safeguard against cyber attacks. A must for CSE students interested in securing the digital world.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Minimal JavaScript for toggling sidebar
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.sidebar').classList.toggle('active');
+        });
+
+        document.querySelector('.close-btn').addEventListener('click', () => {
+            document.querySelector('.sidebar').classList.toggle('active');
+        });
+    </script>
+     <script src="search.js"></script>
+    <script src="chatbot.js"></script>
+</body>
+</html>

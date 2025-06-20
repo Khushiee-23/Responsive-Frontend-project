@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - CodingLab</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <div class="logo">CodingLab</div>
+        <div class="menu">
+            <a href="home.html" target="_blank">Home</a>
+            <a href="product.html" target="_blank">Products</a>
+            <a href="service.html" target="_blank">Services</a>
+            <a href="contact.html" target="_blank">Contact Us</a>
+            <div class="search-bar">
+                <div class="icon">🔍</div>
+                <input type="text" id="searchInput" placeholder="Search here..." aria-label="Search" oninput="handleSearch()" onblur="hideSearchResults()">
+                <div class="search-results" id="searchResults"></div>
+            </div>
+        </div>
+        <div class="menu-toggle" onclick="document.querySelector('.sidebar').classList.toggle('active')" aria-label="Toggle menu">☰</div>
+    </nav>
+
+    <div class="sidebar">
+        <div class="close-btn" onclick="document.querySelector('.sidebar').classList.toggle('active')" aria-label="Close menu">✖</div>
+        <div class="menu">
+            <a href="home.html" target="_blank">Home</a>
+            <a href="service.html" target="_blank">Services</a>
+            <a href="products.html" target="_blank">Products</a>
+            <a href="contact.html" target="_blank">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <h1>Welcome to CodingLab on June 17, 2025!</h1>
+        <p>Your one-stop platform for cutting-edge tech education and services.</p>
+        <a href="#overview" class="cta-button">Explore Our Courses and Services</a>
+    </div>
+
+      <!-- Overview Section -->
+    <div class="overview-section" id="overview">
+        <h2>What We Offer</h2>
+
+        <!-- Courses Overview -->
+        <div class="overview-card" id="courses-overview">
+            <h3>Our Courses</h3>
+            <p>
+                Discover our expertly crafted courses in Artificial Intelligence, Full Stack Development, and Cybersecurity. Each course is designed to equip you with the skills needed to excel in the tech industry.
+            </p>
+            <a href="products.html" target="_blank">View All Courses</a>
+        </div>
+
+        <!-- Services Overview -->
+        <div class="overview-card" id="services-overview">
+            <h3>Our Services</h3>
+            <p>
+                From Software Development to IT Consulting and Training Programs, our services are tailored to help businesses and individuals thrive in a digital world.
+            </p>
+            <a href="service.html" target="_blank">Explore Our Services</a>
+        </div>
+    </div>
+
+    <script>
+        // Minimal JavaScript for toggling sidebar
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.sidebar').classList.toggle('active');
+        });
+
+        document.querySelector('.close-btn').addEventListener('click', () => {
+            document.querySelector('.sidebar').classList.toggle('active');
+        });
+
+        
+    </script>
+     <script src="search.js"></script>
+    <!-- Include the external chatbot script -->
+    <script src="chatbot.js"></script>
+</body>
+</html>

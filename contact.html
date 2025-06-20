@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CodingLab</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <div class="logo">CodingLab</div>
+        <div class="menu">
+            <a href="home.html" target="_blank">Home</a>
+            <a href="service.html" target="_blank">Services</a>
+            <a href="products.html" target="_blank">Products</a>
+            <a href="contact.html" target="_blank">Contact Us</a>
+            <div class="search-bar">
+    <div class="icon">🔍</div>
+    <input type="text" id="searchInput" placeholder="Search here..." aria-label="Search" oninput="handleSearch()" onblur="hideSearchResults()">
+    <div class="search-results" id="searchResults"></div>
+</div>
+        </div>
+        <div class="menu-toggle" onclick="document.querySelector('.sidebar').classList.toggle('active')" aria-label="Toggle menu">☰</div>
+    </nav>
+
+    <div class="sidebar">
+        <div class="close-btn" onclick="document.querySelector('.sidebar').classList.toggle('active')" aria-label="Close menu">✖</div>
+        <div class="menu">
+             <a href="home.html" target="_blank">Home</a>
+            <a href="product.html" target="_blank">Products</a>
+            <a href="service.html" target="_blank">Services</a>
+            <a href="contact.html" target="_blank">Contact Us</a>
+        </div>
+          <div class="search-bar">
+    <div class="icon">🔍</div>
+    <input type="text" id="searchInput" placeholder="Search here..." aria-label="Search" oninput="handleSearch()" onblur="hideSearchResults()">
+    <div class="search-results" id="searchResults"></div>
+</div>
+    </div>
+
+    <!-- Contact Form Section -->
+    <div class="contact-section">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+    <script>
+
+
+document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.sidebar').classList.toggle('active');
+        });
+
+        document.querySelector('.close-btn').addEventListener('click', () => {
+            document.querySelector('.sidebar').classList.toggle('active');
+        });
+    </script>
+    <script src="search.js"></script>
+<script src="chatbot.js"></script>
+</body>
+</html>

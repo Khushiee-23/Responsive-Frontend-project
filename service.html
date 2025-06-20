@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - CodingLab</title>
+    <link rel="stylesheet" href="service.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <div class="logo">CodingLab</div>
+        <div class="menu">
+            <a href="home.html" target="_blank">Home</a>
+            <a href="product.html" target="_blank">Products</a>
+            <a href="service.html" target="_blank">Services</a>
+            <a href="contact.html" target="_blank">Contact Us</a>
+            <div class="search-bar">
+    <div class="icon">🔍</div>
+    <input type="text" id="searchInput" placeholder="Search here..." aria-label="Search" oninput="handleSearch()" onblur="hideSearchResults()">
+    <div class="search-results" id="searchResults"></div>
+</div>
+        </div>
+        <div class="menu-toggle" onclick="document.querySelector('.sidebar').classList.toggle('active')" aria-label="Toggle menu">☰</div>
+    </nav>
+
+    <div class="sidebar">
+        <div class="close-btn" onclick="document.querySelector('.sidebar').classList.toggle('active')" aria-label="Close menu">✖</div>
+        <div class="menu">
+            <a href="home.html" target="_blank">Home</a>
+            <a href="service.html" target="_blank">Services</a>
+            <a href="product.html" target="_blank">Products</a>
+            <a href="contact.html" target="_blank">Contact Us</a>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="services-section">
+        <h1>Our Services</h1>
+
+        <!-- Service 1: Software Development -->
+        <div class="service-card">
+            <div class="service-icon">💻</div>
+            <div class="service-details">
+                <h3>Software Development</h3>
+                <p>
+                    We provide custom software development services tailored to your business needs. From web applications to mobile apps, our team leverages the latest technologies to deliver scalable and efficient solutions.
+                </p>
+            </div>
+        </div>
+
+        <!-- Service 2: IT Consulting -->
+        <div class="service-card">
+            <div class="service-icon">🛠️</div>
+            <div class="service-details">
+                <h3>IT Consulting</h3>
+                <p>
+                    Our IT consulting services help you optimize your technology infrastructure. We offer expertise in cloud computing, cybersecurity, and system integration to ensure your business stays ahead in the digital landscape.
+                </p>
+            </div>
+        </div>
+
+        <!-- Service 3: Training Programs -->
+        <div class="service-card">
+            <div class="service-icon">📚</div>
+            <div class="service-details">
+                <h3>Training Programs</h3>
+                <p>
+                    Empower your team with our comprehensive training programs. We offer workshops and courses in programming, data science, and emerging technologies, designed to upskill your workforce for the future.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Minimal JavaScript for toggling sidebar
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.sidebar').classList.toggle('active');
+        });
+
+        document.querySelector('.close-btn').addEventListener('click', () => {
+            document.querySelector('.sidebar').classList.toggle('active');
+        });
+    </script>
+     <script src="search.js"></script>
+    <script src="chatbot.js"></script>
+</body>
+</html>
